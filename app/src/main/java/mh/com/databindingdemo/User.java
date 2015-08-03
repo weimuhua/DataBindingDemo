@@ -37,4 +37,8 @@ public class User {
                 break;
         }
     }
+
+    public boolean isBatMan() {
+        return firstName.equals("Bruce");
+    }
 }
