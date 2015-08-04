@@ -5,8 +5,6 @@
 
         <import type="mh.com.databindingdemo.User" />
 
-        <import type="android.view.View" />
-
         <variable
             name="user"
             type="User" />
@@ -17,19 +15,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
+        <TextView
             android:id="@+id/first_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{user.onClick}"
-            android:text="@{user.getFirstName}"
-            android:visibility="@{user.isBatMan ? View.VISIBLE : View.INVISIBLE}" />
+            android:text="@{user.firstName}" />
 
-        <Button
+        <TextView
             android:id="@+id/last_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{user.onClick}"
-            android:text="@{user.getLastName}" />
+            android:text="@{user.lastName}" />
     </LinearLayout>
 </layout>

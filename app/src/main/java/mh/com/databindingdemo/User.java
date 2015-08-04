@@ -1,10 +1,13 @@
 package mh.com.databindingdemo;
 
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 import android.util.Log;
-import android.view.View;
 
-public class User {
+import mh.com.databindingdemo.BR;
+
+public class User extends BaseObservable {
 
     private static final String TAG = "User";
 
@@ -16,29 +19,27 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Bindable
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
+    @Bindable
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
-    public void onClick(View view) {
-        int id = view.getId();
-        switch (id) {
-            case R.id.first_name:
-                Log.d(TAG, "first_name onClick");
-                break;
-            case R.id.last_name:
-                Log.d(TAG, "last_name onClick");
-                break;
-            default:
-                break;
-        }
+    public void setFirstName(String firstName) {
+        Log.d(TAG, "setFirstName");
+        this.firstName = firstName;
+        notifyPropertyChanged(BR.firstName);
+        Log.d(TAG, "this.firstName : " + this.firstName);
     }
 
-    public boolean isBatMan() {
-        return firstName.equals("Bruce");
+    public void setLastName(String lastName) {
+        Log.d(TAG, "setLastName");
+        this.lastName = lastName;
+        notifyPropertyChanged(BR.lastName);
+        Log.d(TAG, "this.lastName : " + this.lastName);
     }
 }
