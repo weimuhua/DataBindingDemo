@@ -3,7 +3,6 @@ package mh.com.databindingdemo;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.util.Log;
 
 import mh.com.databindingdemo.BR;
 
@@ -30,16 +29,12 @@ public class User extends BaseObservable {
     }
 
     public void setFirstName(String firstName) {
-        Log.d(TAG, "setFirstName");
         this.firstName = firstName;
         notifyPropertyChanged(BR.firstName);
-        Log.d(TAG, "this.firstName : " + this.firstName);
     }
 
     public void setLastName(String lastName) {
-        Log.d(TAG, "setLastName");
         this.lastName = lastName;
         notifyPropertyChanged(BR.lastName);
-        Log.d(TAG, "this.lastName : " + this.lastName);
     }
 }

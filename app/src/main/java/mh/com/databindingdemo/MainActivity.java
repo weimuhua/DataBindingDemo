@@ -1,47 +1,37 @@
 package mh.com.databindingdemo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
+import android.view.View;
 
 
+import mh.com.databindingdemo.basic.BasicBindingActivity;
 import mh.com.databindingdemo.databinding.ActivityMainBinding;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
-    private static final String TAG = "MainActivity";
-
-    private static final int MSG_CHANGE_USER = 1;
-
-    private Handler mHandler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
-            switch (msg.what) {
-                case MSG_CHANGE_USER:
-                    Log.d(TAG, "MSG_CHANGE_USER");
-                    mUser.setFirstName("Wayne");
-                    mUser.setLastName("Bruce");
-                    break;
-            }
-            return false;
-        }
-    });
-
-    private User mUser;
-    private ActivityMainBinding binding;
+    private ActivityMainBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mUser = new User("Bruce", "Wayne");
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setUser(mUser);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        mHandler.sendEmptyMessageDelayed(MSG_CHANGE_USER, 3000);
+        mBinding.basicBinding.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+        if (v == mBinding.basicBinding) {
+            intent = new Intent(this, BasicBindingActivity.class);
+        }
+
+        if (intent != null) {
+            startActivity(intent);
+        }
+    }
 }

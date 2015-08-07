@@ -3,11 +3,6 @@
 
     <data>
 
-        <import type="mh.com.databindingdemo.User" />
-
-        <variable
-            name="user"
-            type="User" />
     </data>
 
     <LinearLayout
@@ -15,16 +10,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/first_name"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/basic_binding"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{user.firstName}" />
-
-        <TextView
-            android:id="@+id/last_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.lastName}" />
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/basic_binding" />
     </LinearLayout>
 </layout>

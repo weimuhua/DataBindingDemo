@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="user_firstname">user firstname : </string>
+    <string name="user_lastname">user lastname : </string>
+
+    <string name="basic_binding">Basic Binding</string>
 </resources>
