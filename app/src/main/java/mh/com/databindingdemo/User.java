@@ -12,10 +12,12 @@ public class User extends BaseObservable {
 
     private String firstName;
     private String lastName;
+    private int age;
 
-    public User(String firstName, String lastName) {
+    public User(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
 
     @Bindable
@@ -28,6 +30,10 @@ public class User extends BaseObservable {
         return this.lastName;
     }
 
+    public int getAge() {
+        return this.age;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
         notifyPropertyChanged(BR.firstName);
@@ -36,5 +42,13 @@ public class User extends BaseObservable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
         notifyPropertyChanged(BR.lastName);
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String isAdult() {
+        return this.age >= 18 ? "true" : "false";
     }
 }

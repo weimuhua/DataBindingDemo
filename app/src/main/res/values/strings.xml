@@ -6,6 +6,7 @@
 
     <string name="user_firstname">user firstname : </string>
     <string name="user_lastname">user lastname : </string>
+    <string name="is_adult">is adult?</string>
 
     <string name="basic_binding">Basic Binding</string>
 </resources>

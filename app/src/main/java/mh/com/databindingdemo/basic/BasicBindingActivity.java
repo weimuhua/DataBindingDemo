@@ -16,6 +16,6 @@ public class BasicBindingActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         BasicBindBinding binding = DataBindingUtil.setContentView(this, R.layout.basic_bind);
-        binding.setUser(new User("Bruce", "Wayne"));
+        binding.setUser(new User("Bruce", "Wayne", 32));
     }
 }
