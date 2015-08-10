@@ -6,9 +6,12 @@
 
     <string name="user_firstname">user firstname : </string>
     <string name="user_lastname">user lastname : </string>
+    <string name="user_name">user name : </string>
+    <string name="user_age">user age : </string>
     <string name="is_adult">is adult?</string>
 
     <string name="basic_binding">Basic Binding</string>
     <string name="custom_binding">Custom Binding</string>
     <string name="include_binding">Include Binding</string>
+    <string name="expression_test">Expression Test</string>
 </resources>
