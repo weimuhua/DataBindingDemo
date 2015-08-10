@@ -20,6 +20,7 @@
 
         <activity android:name=".basic.BasicBindingActivity" />
         <activity android:name=".custom.CustomBindingActivity" />
+        <activity android:name=".include.IncludeBindingActivity" />
     </application>
 
 </manifest>
