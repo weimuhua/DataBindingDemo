@@ -8,9 +8,12 @@ import android.view.View;
 
 
 import mh.com.databindingdemo.basic.BasicBindingActivity;
+import mh.com.databindingdemo.custom.CustomBindingActivity;
 import mh.com.databindingdemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends Activity implements View.OnClickListener {
+
+    private static final String TAG = "DataBinding";
 
     private ActivityMainBinding mBinding;
 
@@ -21,6 +24,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         mBinding.basicBinding.setOnClickListener(this);
+        mBinding.customBinding.setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +32,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Intent intent = null;
         if (v == mBinding.basicBinding) {
             intent = new Intent(this, BasicBindingActivity.class);
+        } else if (v == mBinding.customBinding) {
+            intent = new Intent(this, CustomBindingActivity.class);
         }
 
         if (intent != null) {

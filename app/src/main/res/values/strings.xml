@@ -9,4 +9,5 @@
     <string name="is_adult">is adult?</string>
 
     <string name="basic_binding">Basic Binding</string>
+    <string name="custom_binding">Custom Binding</string>
 </resources>
