@@ -23,6 +23,7 @@
         <activity android:name=".include.IncludeBindingActivity" />
         <activity android:name=".expression.ExpressionActivity" />
         <activity android:name=".collections.CollectionsActivity" />
+        <activity android:name=".observable.ObservableActivity" />
     </application>
 
 </manifest>

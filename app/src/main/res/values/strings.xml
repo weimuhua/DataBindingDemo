@@ -19,4 +19,5 @@
     <string name="include_binding">Include Binding</string>
     <string name="expression_test">Expression Test</string>
     <string name="collection_test">Collection Test</string>
+    <string name="observable_test">Observable Test</string>
 </resources>

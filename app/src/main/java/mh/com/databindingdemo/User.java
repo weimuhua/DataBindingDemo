@@ -30,6 +30,7 @@ public class User extends BaseObservable {
         return this.lastName;
     }
 
+    @Bindable
     public int getAge() {
         return this.age;
     }
@@ -46,6 +47,7 @@ public class User extends BaseObservable {
 
     public void setAge(int age) {
         this.age = age;
+        notifyPropertyChanged(BR.age);
     }
 
     public String isAdult() {
