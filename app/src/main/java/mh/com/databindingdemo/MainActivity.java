@@ -8,6 +8,7 @@ import android.view.View;
 
 
 import mh.com.databindingdemo.basic.BasicBindingActivity;
+import mh.com.databindingdemo.collections.CollectionsActivity;
 import mh.com.databindingdemo.custom.CustomBindingActivity;
 import mh.com.databindingdemo.databinding.ActivityMainBinding;
 import mh.com.databindingdemo.expression.ExpressionActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBinding.customBinding.setOnClickListener(this);
         mBinding.includeBinding.setOnClickListener(this);
         mBinding.expressionTest.setOnClickListener(this);
+        mBinding.collectionTest.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             intent = new Intent(this, IncludeBindingActivity.class);
         } else if (v == mBinding.expressionTest) {
             intent = new Intent(this, ExpressionActivity.class);
+        } else if (v == mBinding.collectionTest) {
+            intent = new Intent(this, CollectionsActivity.class);
         }
 
         if (intent != null) {

@@ -22,6 +22,7 @@
         <activity android:name=".custom.CustomBindingActivity" />
         <activity android:name=".include.IncludeBindingActivity" />
         <activity android:name=".expression.ExpressionActivity" />
+        <activity android:name=".collections.CollectionsActivity" />
     </application>
 
 </manifest>

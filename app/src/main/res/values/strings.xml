@@ -10,8 +10,13 @@
     <string name="user_age">user age : </string>
     <string name="is_adult">is adult?</string>
 
+    <string name="list_index">list[index] : </string>
+    <string name="sparse_index">sparse[index] : </string>
+    <string name="map_key">map[key] : </string>
+
     <string name="basic_binding">Basic Binding</string>
     <string name="custom_binding">Custom Binding</string>
     <string name="include_binding">Include Binding</string>
     <string name="expression_test">Expression Test</string>
+    <string name="collection_test">Collection Test</string>
 </resources>
