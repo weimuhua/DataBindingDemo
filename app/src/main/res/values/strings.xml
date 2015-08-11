@@ -10,6 +10,10 @@
     <string name="user_age">user age : </string>
     <string name="is_adult">is adult?</string>
 
+    <string name="company_name">company name : </string>
+    <string name="company_age">company age : </string>
+    <string name="company_employee">company employee ： </string>
+
     <string name="list_index">list[index] : </string>
     <string name="sparse_index">sparse[index] : </string>
     <string name="map_key">map[key] : </string>
